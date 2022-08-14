@@ -1,5 +1,13 @@
+<<<<<<< Updated upstream
 [gd_resource type="StyleBoxFlat" format=2]
 
 [resource]
 bg_color = Color( 1, 1, 1, 0.490196 )
 border_color = Color( 1, 1, 1, 1 )
+=======
+[gd_resource type="StyleBoxFlat" format=2]
+
+[resource]
+bg_color = Color( 1, 1, 1, 0.490196 )
+border_color = Color( 1, 1, 1, 1 )
+>>>>>>> Stashed changes
