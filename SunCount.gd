@@ -1,25 +1,21 @@
-<<<<<<< Updated upstream
 extends Label
 
-var counter = 0
 onready var tween = get_node("Tween")
+onready var Global = get_node("/root/Globals")
+const Piece = preload("res://Sun.tscn")
 
-func _on_Sun_pressed():
-	counter += 25
-	text = str(counter)
-	
 func _on_Tween_tween_step():
 	tween.start()
-=======
-extends Label
 
-var counter = 0
-onready var tween = get_node("Tween")
-
-func _on_Sun_pressed():
-	counter += 25
-	text = str(counter)
+func _process(delta):
+	text = str(Global.SunCount)
 	
-func _on_Tween_tween_step():
-	tween.start()
->>>>>>> Stashed changes
+func addPiece():
+	var piece = Piece.instance()
+	piece.connect("clicked", self, "handle_piece_click")
+	add_child(piece)
+
+func handle_piece_click(piece):
+	Global.SunCount += 25
+	print("Processed Clicked")
+	pass
